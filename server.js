@@ -8,7 +8,7 @@ var app = express();
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.join())
+app.use(bodyParser.json())
 
 app.use(methodOverride("_method"));
 //require package
