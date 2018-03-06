@@ -1,0 +1,56 @@
+
+<div class="container" id="containerone">
+    <div class="row">
+            <div class="col-xs-12 text-center" id="top-bar">
+                <h1>~WELCOME TO EAT DA BURGER!!</h1>
+            </div>
+        <div class="col-xs-4 text-center" class="task">
+             <div class="row">
+                {{#each burger_data}}
+                    {{#unless this.devoured}}
+                            <div class="col-xs-4 text-center">
+                                <pre>{{this.id}}. {{this.burger_name}}</pre>
+                            </div>
+                        <div class="col-xs-3 text-center">
+                            <form method="POST" action="/burgers/update?_method=PUT" class="button-size">
+                                <input type="hidden" name="burger_id" type="text" value="{{this.id}}">
+                                <br>
+                                <button type="submit" class="btn btn-default">
+                                    DEVOUR IT!
+                                </button>
+                            </form>
+                            <br>
+                        </div>
+                    {{/unless}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- container that holds the new burgers --}}
+<div class="container" id="containertwo">
+    <div class="row">
+        <div class="col-xs-12 text-center enter_section">
+                <h2>~May I take your order?</h2>
+            <form action="/burgers/create" method="POST">
+                    <input type="text" name="burger_name" class="form-control"value="" id="enter_text">
+                <button type="submit" class="btn btn-primary" id="text-enter-button">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</div>
+    {{!-- container that holds the burgers we eat --}}
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 text-center" class="taks">
+                    {{#each burger_data}}
+                        {{#if this.devoured}}
+                            <input class="form-control" type="text" placeholder= "{{this.id}}. {{this.burger_name}}">
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+     <p class="copy">EAT DA BURGER is a trade mark of UCF™ all Rights reserved</p>
+   
+

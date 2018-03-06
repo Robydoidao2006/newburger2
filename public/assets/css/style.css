@@ -1,0 +1,30 @@
+body{
+	background-color: black;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	color: white;
+}
+
+h1{
+	color: red;
+}
+
+h2{
+	color: red;
+}
+
+#picture {
+	float: right;
+}
+
+.container{
+padding-bottom: 10px;	
+padding-left: 20px;
+}
+
+.copy{
+	padding-top: 20%;	
+	color: white;
+	padding-left: 35%;
+	
+}
