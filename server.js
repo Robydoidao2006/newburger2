@@ -5,9 +5,10 @@ var methodOverride = require("method-override");
 
 var app = express();
 //static content for the app from the "public" folder
-app.use(express.static(process.cwd()+ "/public"));
+app.use(express.static("public"));
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.join())
 
 app.use(methodOverride("_method"));
 //require package
