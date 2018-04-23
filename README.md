@@ -8,8 +8,7 @@ https://newburger2.herokuapp.com/
 
 ## Aditional Information
 
-- This Project display a list of food already made, and will take user input to add more food to the table. The user
-eats the food and it will display what ever the user ate on another container.
+- This Project display a list of food already made, The user can either eat whats already made or ask to make somthing new. The user then eats the food and it will display whatever the user ate on another container.
 
 ## This Project was built using:
 - HTML / Handlebars
